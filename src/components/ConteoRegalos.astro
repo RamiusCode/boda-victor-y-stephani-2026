@@ -45,6 +45,16 @@
                             </h2>
                         </div>
 
+                        <!-- FECHA -->
+                        <div class="mb-3">
+                            <p
+                                class="font-crimson text-xl sm:text-lg md:text-xl texto-conteo font-semibold text-center"
+                                id="fecha-conteo"
+                            >
+                                Domingo 13 de septiembre
+                            </p>
+                        </div>
+
                         <!-- CONTENIDO INFERIOR CON ICONO Y TEXTOS -->
                         <div class="flex items-center justify-between gap-4">
                             <!-- LADO IZQUIERDO: ICONO DE REGALO -->
@@ -63,25 +73,25 @@
 
                             <!-- LADO DERECHO: TEXTOS Y BOTÓN -->
                             <div class="flex-1 text-center">
-                                <!-- FECHA -->
-                                <div class="mb-2">
-                                    <p
-                                        class="font-crimson text-xl sm:text-lg md:text-xl texto-conteo font-semibold"
-                                        id="fecha-conteo"
-                                    >
-                                        Domingo 13 de septiembre
-                                    </p>
-                                </div>
-
                                 <!-- LUGAR -->
-                                <div class="leading-tight">
+                                <div class="mb-2 leading-tight">
                                     <p
                                         class="font-crimson text-xl sm:text-sm md:text-base texto-conteo"
                                         id="lugar-conteo"
                                     >
-                                        Salón de Eventos "La Corona"<br />
+                                        Salón de Eventos <br />"La Corona"<br />
                                         Calle Otero de la Vega<br />
                                         y Héroes del Acre
+                                    </p>
+                                </div>
+
+                                <!-- HORA -->
+                                <div>
+                                    <p
+                                        class="font-crimson text-xl sm:text-base md:text-lg leading-tight texto-conteo font-semibold"
+                                        id="hora-conteo"
+                                    >
+                                        Hora: 14:00 p.m.
                                     </p>
                                 </div>
 
@@ -174,7 +184,8 @@
     }
 
     #titulo-conteo,
-    #fecha-conteo {
+    #fecha-conteo,
+    #hora-conteo {
         color: var(--dorado);
     }
 
