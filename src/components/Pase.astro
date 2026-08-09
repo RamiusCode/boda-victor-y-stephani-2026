@@ -29,12 +29,12 @@ const { numeroPases = 1, nombreInvitado = "" } = Astro.props;
 
                 <!-- CARD PRINCIPAL -->
                 <div
-                    class="relative rounded-[40px] shadow-xl overflow-hidden"
+                    class="relative rounded-[40px] overflow-hidden card-suave-vino"
                     id="card-principal-pase"
                 >
                     <!-- IMAGEN DE FONDO -->
                     <img
-                        src="/imagenes/azul.png"
+                        src="/imagenes/fondoazul.png"
                         alt="Fondo pase"
                         class="absolute inset-0 w-full h-full object-cover"
                     />
@@ -45,7 +45,7 @@ const { numeroPases = 1, nombreInvitado = "" } = Astro.props;
                         <!-- TÍTULO -->
                         <div class="mb-6" id="titulo-pase">
                             <h2
-                                class="font-great-vibes text-[2.5rem] text-white leading-none mb-2"
+                                class="font-great-vibes text-[2.5rem] text-[#dfbb84] leading-none mb-2"
                             >
                                 Pases
                             </h2>
@@ -59,13 +59,13 @@ const { numeroPases = 1, nombreInvitado = "" } = Astro.props;
                         <!-- NÚMERO DE PASES -->
                         <div class="mb-4" id="numero-pase">
                             <p
-                                class="text-white font-bold leading-none"
-                                style="font-size: 5rem; text-shadow: 0 4px 16px rgba(0,0,0,0.2);"
+                                class="text-[#dfbb84] font-bold leading-none"
+                                style="font-size: 5rem; text-shadow: 0 4px 16px rgba(63, 18, 19, 0.35);"
                             >
                                 {numeroPases}
                             </p>
                             <p
-                                class="font-crimson text-base uppercase tracking-[0.3em] text-white/80 mt-1"
+                                class="font-crimson text-base uppercase tracking-[0.3em] text-[#dfbb84]/90 mt-1"
                             >
                                 {numeroPases === 1 ? "Pase" : "Pases"}
                             </p>
@@ -73,9 +73,9 @@ const { numeroPases = 1, nombreInvitado = "" } = Astro.props;
 
                         <!-- SEPARADOR -->
                         <div class="flex items-center justify-center gap-2 my-4">
-                            <div class="w-10 h-px bg-white/40"></div>
-                            <div class="w-1.5 h-1.5 rounded-full bg-white/50"></div>
-                            <div class="w-10 h-px bg-white/40"></div>
+                            <div class="w-10 h-px bg-[#fffcfa]/40"></div>
+                            <div class="w-1.5 h-1.5 rounded-full bg-[#fffcfa]/50"></div>
+                            <div class="w-10 h-px bg-[#fffcfa]/40"></div>
                         </div>
 
                         <!-- NOMBRE DEL INVITADO (opcional) -->
@@ -107,7 +107,7 @@ const { numeroPases = 1, nombreInvitado = "" } = Astro.props;
                             {
                                 Array.from({ length: numeroPases }).map((_, index) => (
                                     <div
-                                        class="w-9 h-9 rounded-full bg-white/20 border border-white/40 flex items-center justify-center"
+                                        class="w-9 h-9 rounded-full bg-[#fffcfa]/20 border border-white/40 flex items-center justify-center"
                                         style={`animation-delay: ${index * 0.2}s;`}
                                     >
                                         <svg

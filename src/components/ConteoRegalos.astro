@@ -22,14 +22,13 @@
                 </div>
 
                 <div
-                    class="relative rounded-2xl shadow-xl overflow-hidden"
-                    style="background-color: #e8dcc8;"
+                    class="relative rounded-[32px] overflow-hidden card-roja"
                 >
                     <!-- IMAGEN DE FONDO -->
                     <img
                         src="/imagenes/fondorojo.png"
                         alt="Fondo conteo de regalos"
-                        class="absolute inset-0 w-full h-full object-cover opacity-90"
+                        class="absolute inset-0 w-full h-full object-cover"
                     />
 
                     <!-- Contenido de la card -->
@@ -75,7 +74,7 @@
                                 </div>
 
                                 <!-- LUGAR -->
-                                <div class="mb-2 leading-tight">
+                                <div class="leading-tight">
                                     <p
                                         class="font-crimson text-xl sm:text-sm md:text-base texto-conteo"
                                         id="lugar-conteo"
@@ -86,19 +85,21 @@
                                     </p>
                                 </div>
 
-                                <!-- BOTÓN VER UBICACIÓN -->
-                                <div class="mt-4">
-                                    <a
-                                        href="https://maps.app.goo.gl/7HoijkwD7oAwkQn48"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        class="inline-block px-4 py-2 sm:px-6 sm:py-2.5 border-2 rounded-full font-crimson text-base sm:text-sm uppercase tracking-wider transition-all duration-300 btn-ubicacion-conteo font-semibold"
-                                        id="btn-ubicacion-conteo"
-                                    >
-                                        VER UBICACIÓN
-                                    </a>
-                                </div>
                             </div>
+                        </div>
+
+                        <!-- BOTÓN VER UBICACIÓN: fila propia a todo el ancho
+                             para que el texto nunca se parta en dos líneas -->
+                        <div class="mt-6 flex justify-center">
+                            <a
+                                href="https://maps.app.goo.gl/7HoijkwD7oAwkQn48"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="inline-block whitespace-nowrap px-6 py-2 sm:px-8 sm:py-2.5 border-2 rounded-full font-crimson text-base sm:text-sm uppercase tracking-wider transition-all duration-300 btn-ubicacion-conteo font-semibold"
+                                id="btn-ubicacion-conteo"
+                            >
+                                VER UBICACIÓN
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -167,28 +168,33 @@
 <!-- 🎨 ESTILOS CSS                                              -->
 <!-- ═══════════════════════════════════════════════════════════ -->
 <style>
-    /* Color de textos #122a4d */
+    /* Fondo rojo: cuerpo en blanco, titulo en dorado */
     .texto-conteo {
-        color: #122a4d;
+        color: #ffffff;
     }
 
-    /* Color del icono de regalo #122a4d */
+    #titulo-conteo,
+    #fecha-conteo {
+        color: var(--dorado);
+    }
+
+    /* Icono en dorado sobre el fondo rojo */
     .icono-conteo-color {
-        filter: brightness(0) saturate(100%) invert(13%) sepia(31%)
-            saturate(1876%) hue-rotate(186deg) brightness(95%) contrast(96%);
+        filter: brightness(0) saturate(100%) invert(67%) sepia(18%)
+            saturate(650%) hue-rotate(357deg) brightness(114%) contrast(94%);
     }
 
-    /* Botón con color #122a4d */
+    /* Botón en dorado sobre el fondo rojo */
     .btn-ubicacion-conteo {
-        color: #122a4d;
-        border-color: #122a4d;
+        color: var(--dorado);
+        border-color: var(--dorado);
     }
 
     .btn-ubicacion-conteo:hover {
-        background-color: #122a4d;
-        color: white;
+        background-color: var(--dorado);
+        color: #5f1b1c;
         transform: scale(1.05);
-        box-shadow: 0 5px 15px rgba(18, 42, 77, 0.3);
+        box-shadow: 0 5px 15px rgba(95, 27, 28, 0.3);
     }
 
     /* Efecto hover en la card */

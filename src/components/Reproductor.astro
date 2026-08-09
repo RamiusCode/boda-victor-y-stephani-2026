@@ -9,7 +9,7 @@
             <!-- Texto superior -->
             <div class="text-center mb-4">
                 <p
-                    class="text-[#122a4d] text-lg md:text-xl font-light font-charm"
+                    class="text-[#5f1b1c] text-lg md:text-xl font-light font-charm"
                 >
                     Dale Play para escuchar nuestra canción.
                 </p>
@@ -17,7 +17,7 @@
 
             <!-- Reproductor -->
             <div
-                class="bg-white rounded-2xl shadow-lg p-6 md:p-8 max-w-md mx-auto border border-[#122a4d]/20"
+                class="bg-[#fffcfa] rounded-2xl shadow-[0_10px_30px_-14px_rgba(95,27,28,0.25)] p-6 md:p-8 max-w-md mx-auto border border-[#5f1b1c]/20"
                 id="music-player-container"
             >
                 <!-- Controles del reproductor -->
@@ -25,7 +25,7 @@
                     <!-- Botón Play/Pause -->
                     <button
                         id="playPauseBtn"
-                        class="flex-shrink-0 w-12 h-12 rounded-full bg-[#122a4d]/10 hover:bg-[#122a4d]/20 flex items-center justify-center transition-all duration-300 focus:outline-none"
+                        class="flex-shrink-0 w-12 h-12 rounded-full bg-[#5f1b1c]/10 hover:bg-[#5f1b1c]/20 flex items-center justify-center transition-all duration-300 focus:outline-none"
                     >
                         <svg
                             id="play-icon"
@@ -33,7 +33,7 @@
                             height="20"
                             viewBox="0 0 24 24"
                             fill="currentColor"
-                            class="text-[#122a4d] ml-1"
+                            class="text-[#5f1b1c] ml-1"
                         >
                             <path d="M8 5v14l11-7z"></path>
                         </svg>
@@ -43,7 +43,7 @@
                             height="20"
                             viewBox="0 0 24 24"
                             fill="currentColor"
-                            class="text-[#122a4d] hidden"
+                            class="text-[#5f1b1c] hidden"
                         >
                             <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"></path>
                         </svg>
@@ -52,13 +52,13 @@
                     <!-- Barra de progreso y tiempos -->
                     <div class="flex-1">
                         <div
-                            class="flex items-center gap-2 text-sm text-[#122a4d] mb-2"
+                            class="flex items-center gap-2 text-sm text-[#5f1b1c] mb-2"
                         >
                             <span id="currentTime" class="font-medium"
                                 >0:00</span
                             >
-                            <span class="text-[#122a4d]/70">/</span>
-                            <span id="totalDuration" class="text-[#122a4d]/70"
+                            <span class="text-[#5f1b1c]/70">/</span>
+                            <span id="totalDuration" class="text-[#5f1b1c]/70"
                                 >0:00</span
                             >
                         </div>
@@ -69,20 +69,20 @@
                             id="progressBar"
                             value="0"
                             max="100"
-                            class="w-full h-1 bg-gray-200 rounded-full appearance-none cursor-pointer slider-custom"
+                            class="w-full h-1 bg-[#e8d8ce] rounded-full appearance-none cursor-pointer slider-custom"
                         />
                     </div>
 
                     <!-- Botón de volumen/opciones -->
                     <button
-                        class="flex-shrink-0 w-10 h-10 rounded-full hover:bg-[#122a4d]/10 flex items-center justify-center transition-all duration-300 focus:outline-none"
+                        class="flex-shrink-0 w-10 h-10 rounded-full hover:bg-[#5f1b1c]/10 flex items-center justify-center transition-all duration-300 focus:outline-none"
                     >
                         <svg
                             width="20"
                             height="20"
                             viewBox="0 0 24 24"
                             fill="currentColor"
-                            class="text-[#122a4d]/70"
+                            class="text-[#5f1b1c]/70"
                         >
                             <path
                                 d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
@@ -277,7 +277,7 @@
 
     /* Estilo personalizado para la barra de progreso */
     .slider-custom {
-        background: #e5e7eb;
+        background: #efe2da;
         outline: none;
         border-radius: 10px;
     }
@@ -287,7 +287,7 @@
         width: 14px;
         height: 14px;
         border-radius: 50%;
-        background: #122a4d;
+        background: #5f1b1c;
         cursor: pointer;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         transition: all 0.3s ease;
@@ -295,14 +295,14 @@
 
     .slider-custom::-webkit-slider-thumb:hover {
         transform: scale(1.2);
-        box-shadow: 0 3px 8px rgba(18, 42, 77, 0.5);
+        box-shadow: 0 3px 8px rgba(95, 27, 28, 0.5);
     }
 
     .slider-custom::-moz-range-thumb {
         width: 14px;
         height: 14px;
         border-radius: 50%;
-        background: #122a4d;
+        background: #5f1b1c;
         cursor: pointer;
         border: none;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);

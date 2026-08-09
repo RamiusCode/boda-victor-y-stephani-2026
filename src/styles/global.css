@@ -1,7 +1,102 @@
 @import "tailwindcss";
 
+/* ═══════════════════════════════════════════════════════════ */
+/* 🎨 PALETA DE COLORES — VINO · TERRACOTA · BLUSH · NUDE      */
+/* ═══════════════════════════════════════════════════════════ */
+/* Tomada de la paleta del ramo (rosas rojas + rosas nude).     */
 
+:root {
+  /* Tonos base de la paleta */
+  --vino: #5f1b1c; /* borgoña profundo — texto principal */
+  --rojo: #76180c; /* rojo ladrillo — acento fuerte */
+  --terracota: #a37261; /* rosa terracota — acento medio */
+  --blush: #bf9e8f; /* rosa empolvado — suave */
+  --nude: #e1cfc3; /* nude claro — fondos suaves */
 
+  /* Derivados suaves para cards y fondos */
+  --vino-claro: #8e3a2e; /* pareja de degradado del vino */
+  --crema: #fbf6f2; /* fondo de card, casi blanco cálido */
+  --crema-2: #f3e7df; /* fondo de card con más color */
+  --linea: #e8d8ce; /* bordes muy suaves */
+  --rose-gold: #c9a08a; /* detalles dorados suavizados */
+  --dorado: #dfbb84; /* dorado claro: solo sobre fondo rojo/vino */
+  --dorado-oscuro: #9c7318; /* dorado viejo: sobre fondos claros */
+
+  /* Sombras suaves (nunca negro puro) */
+  --sombra-suave: 0 10px 30px -14px rgba(95, 27, 28, 0.22);
+  --sombra-card: 0 18px 45px -22px rgba(95, 27, 28, 0.28);
+  --sombra-alta: 0 26px 60px -26px rgba(95, 27, 28, 0.32);
+}
+
+/* Filtros para teñir iconos PNG en negro con la paleta */
+.tinte-vino {
+  filter: brightness(0) saturate(100%) invert(40%) sepia(83%) saturate(2744%)
+    hue-rotate(333deg) brightness(99%) contrast(38%);
+}
+.tinte-terracota {
+  filter: brightness(0) saturate(100%) invert(71%) sepia(99%) saturate(294%)
+    hue-rotate(312deg) brightness(82%) contrast(78%);
+}
+.tinte-nude {
+  filter: brightness(0) saturate(100%) invert(36%) sepia(88%) saturate(44%)
+    hue-rotate(341deg) brightness(129%) contrast(150%);
+}
+.tinte-dorado {
+  filter: brightness(0) saturate(100%) invert(67%) sepia(18%) saturate(650%)
+    hue-rotate(357deg) brightness(114%) contrast(94%);
+}
+.tinte-dorado-oscuro {
+  filter: brightness(0) saturate(100%) invert(67%) sepia(63%) saturate(515%)
+    hue-rotate(360deg) brightness(38%) contrast(162%);
+}
+.tinte-blanco {
+  filter: brightness(0) invert(1);
+}
+
+/* ═══════════════════════════════════════════════════════════ */
+/* ❤️ CARDS CON FONDO ROJO (fondorojo.png / fondoazul.png)      */
+/* ═══════════════════════════════════════════════════════════ */
+/* La textura es roja y opaca: los títulos van en dorado y todo  */
+/* el resto del texto en blanco para que se lea.                 */
+
+.card-roja {
+  background: var(--vino);
+  border: 1px solid rgba(223, 187, 132, 0.28);
+  box-shadow: var(--sombra-alta);
+}
+
+/* ═══════════════════════════════════════════════════════════ */
+/* 💳 CARDS SUAVES                                             */
+/* ═══════════════════════════════════════════════════════════ */
+/* Bordes redondeados amplios, borde nude apenas visible y      */
+/* sombra difusa en tono vino en lugar de negro.                */
+
+.card-suave {
+  background: linear-gradient(160deg, #fffcfa 0%, var(--crema) 55%, var(--crema-2) 100%);
+  border: 1px solid var(--linea);
+  box-shadow: var(--sombra-card);
+}
+
+.card-suave-nude {
+  background: linear-gradient(160deg, var(--crema) 0%, var(--crema-2) 60%, #ecd9cf 100%);
+  border: 1px solid var(--linea);
+  box-shadow: var(--sombra-card);
+}
+
+/* Para cards cuya textura de fondo es un PNG semitransparente
+   (fondorojo.png / fondoplomo.png): la base debe ser blanca para que
+   la imagen se componga y muestre su color original, sin teñirse. */
+.card-textura {
+  background: #ffffff;
+  border: 1px solid var(--linea);
+  box-shadow: var(--sombra-card);
+}
+
+.card-suave-vino {
+  background: linear-gradient(160deg, #6c2223 0%, var(--vino) 55%, #4a1516 100%);
+  border: 1px solid rgba(225, 207, 195, 0.25);
+  box-shadow: var(--sombra-alta);
+}
 
 /* ═══════════════════════════════════════════════════════════ */
 /* 🔤 FUENTES PERSONALIZADAS - Cormorant SC                    */
@@ -42,30 +137,46 @@
   font-style: normal;
 }
 
+/* ═══════════════════════════════════════════════════════════ */
+/* ✒️ COMBINACIÓN TIPOGRÁFICA                                  */
+/* ═══════════════════════════════════════════════════════════ */
+/* Parisienne (caligrafía) + Cinzel (capitulares) +             */
+/* Cormorant Garamond (cuerpo).                                 */
+/* Los nombres de clase se mantienen para no tocar el markup;   */
+/* lo que cambió es la familia que sirve cada rol.              */
 
-
-
-
-
-
-
-
-/* Para el nombre */
-.font-great-vibes {
-  font-family: 'Great Vibes', cursive !important;
+/* Rol: nombres y títulos caligráficos */
+.font-great-vibes,
+.font-script {
+  font-family: 'Parisienne', cursive !important;
 }
 
-/* Para mis XV años */
-.font-crimson {
-  font-family: 'Crimson Text', serif !important;
+/* Rol: texto de cuerpo, direcciones, párrafos y etiquetas */
+.font-crimson,
+.font-cuerpo {
+  font-family: 'Cormorant Garamond', serif !important;
 }
 
-/* Para dedicatoria*/
+/* Rol: dedicatorias y textos largos en cursiva */
 .font-cormorant {
   font-family: 'Cormorant Garamond', serif !important;
 }
 
-/*Para texto con Charm */
-.font-charm {
-  font-family: 'Charm', cursive !important;
+/* Rol: capitulares, números grandes y rótulos en mayúscula */
+.font-charm,
+.font-titulo {
+  font-family: 'Cinzel', serif !important;
+}
+
+/* Rol: versalitas (nombres propios, listas de padrinos) */
+.font-cormorant-sc {
+  font-family: 'Cormorant SC', 'Cormorant Garamond', serif !important;
+}
+
+/* Las mayúsculas espaciadas respiran mejor con Cinzel.
+   Solo se cambia la familia: el tracking lo siguen mandando
+   las utilidades de Tailwind de cada componente. */
+.font-crimson.uppercase,
+.font-cuerpo.uppercase {
+  font-family: 'Cinzel', serif !important;
 }

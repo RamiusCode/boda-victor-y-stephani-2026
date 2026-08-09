@@ -19,7 +19,7 @@
 
                 <!-- CARD PRINCIPAL -->
                 <div
-                    class="relative rounded-lg shadow-xl overflow-hidden bg-[#f5f5f5]"
+                    class="relative rounded-[32px] overflow-hidden card-textura"
                     id="card-principal-cal"
                 >
                     <!-- IMAGEN DE FONDO -->
@@ -34,7 +34,7 @@
                         <!-- TÍTULO -->
                         <div class="text-center mb-6">
                             <h2
-                                class="font-great-vibes text-[2.25rem] leading-tight text-[#122a4d]"
+                                class="font-great-vibes text-[2.25rem] leading-tight text-[#9c7318]"
                                 id="titulo-calendario"
                             >
                                 Fecha Especial
@@ -44,12 +44,12 @@
                         <!-- NOMBRE DEL MES -->
                         <div class="text-center mb-4" id="seccion-mes">
                             <h3
-                                class="font-crimson text-xl uppercase tracking-wider text-[#122a4d] font-semibold"
+                                class="font-crimson text-xl uppercase tracking-wider text-[#9c7318] font-semibold"
                                 id="nombre-mes"
                             >
                             </h3>
                             <p
-                                class="font-cormorant-sc text-sm text-[#122a4d] opacity-70 mt-1"
+                                class="font-cormorant-sc text-sm text-[#5f1b1c] opacity-70 mt-1"
                                 id="anio-texto"
                             >
                             </p>
@@ -62,7 +62,7 @@
                         >
                             {
                                 ["D", "L", "M", "M", "J", "V", "S"].map((d) => (
-                                    <div class="text-center font-crimson text-xs text-[#122a4d] font-bold opacity-60">
+                                    <div class="text-center font-crimson text-xs text-[#5f1b1c] font-bold opacity-60">
                                         {d}
                                     </div>
                                 ))
@@ -133,13 +133,13 @@
             const diaDiv = document.createElement("div");
             if (dia === DIA_ESPECIAL) {
                 diaDiv.className =
-                    "aspect-square flex items-center justify-center rounded-md bg-gradient-to-br from-[#122a4d] to-[#1e3f73] shadow-lg dia-cal";
+                    "aspect-square flex items-center justify-center rounded-md bg-gradient-to-br from-[#5f1b1c] to-[#8e3a2e] shadow-[0_10px_30px_-14px_rgba(95,27,28,0.25)] dia-cal";
                 diaDiv.id = "dia-especial-cal";
                 diaDiv.innerHTML = `<span class="font-crimson text-lg text-white font-bold">${dia}</span>`;
             } else {
                 diaDiv.className =
-                    "aspect-square flex items-center justify-center rounded-md hover:bg-[#122a4d]/10 transition-all dia-cal";
-                diaDiv.innerHTML = `<span class="font-crimson text-sm text-[#122a4d]">${dia}</span>`;
+                    "aspect-square flex items-center justify-center rounded-md hover:bg-[#5f1b1c]/10 transition-all dia-cal";
+                diaDiv.innerHTML = `<span class="font-crimson text-sm text-[#5f1b1c]">${dia}</span>`;
             }
             container.appendChild(diaDiv);
         }
@@ -188,7 +188,7 @@
 
 <style>
     #dia-especial-cal {
-        box-shadow: 0 6px 20px rgba(18, 42, 77, 0.4);
+        box-shadow: 0 6px 20px rgba(95, 27, 28, 0.4);
         position: relative;
     }
     #dia-especial-cal::after {
@@ -196,7 +196,7 @@
         position: absolute;
         inset: -3px;
         border-radius: 0.4rem;
-        border: 2px solid rgba(255, 255, 255, 0.3);
+        border: 2px solid rgba(223, 187, 132, 0.6);
         pointer-events: none;
     }
     .font-cormorant-sc {
